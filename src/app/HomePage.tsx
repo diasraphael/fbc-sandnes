@@ -1,13 +1,13 @@
 import Navigation from "@/components/Navigation";
-import LandingSection from "@/components/LandingSection";
+import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main>
+    <div className="relative">
       <Navigation />
-      <LandingSection />
+      <HeroSection />
       <Footer />
-    </main>
+    </div>
   );
 }
