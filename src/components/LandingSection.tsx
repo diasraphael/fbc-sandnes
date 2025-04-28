@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
-const images = ["/landing.jpg", "/church.jpg", "/interior.jpg"];
+const images = ["/interior.jpg", "/landing.jpg", "/church.jpg"];
 
 export default function LandingSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
