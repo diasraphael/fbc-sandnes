@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-family-sans: Inter, sans-serif;
-  --font-family-serif: "Playfair Display", serif;
+  --font-family-sans: Rubik, sans-serif;
 
   --color-background-landing: linear-gradient(
       rgba(35, 25, 23, 0.48),

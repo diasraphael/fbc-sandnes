@@ -13,8 +13,8 @@ export default function Footer() {
             <div className="flex-1 max-w-[350px]">
               <h1 className="text-2xl mb-8">Faith Baptist Church</h1>
               <div className="text-lg">
-                Our Church is a family — a place you can call home. It's where
-                you can find hope, healing, and purpose.
+                Our Church is a family — a place you can call home. It&apos;s
+                where you can find hope, healing, and purpose.
               </div>
               <div className="flex gap-6 items-center cursor-pointer my-8">
                 <CgFacebook
