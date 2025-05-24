@@ -1,55 +1,64 @@
+import React from "react";
+import { CgFacebook, CgInstagram } from "react-icons/cg";
+import { FaYoutube } from "react-icons/fa6";
+import Button from "./button/Button";
+import Input from "./text-input/Input";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Faith Baptist Church</h3>
-            <p className="text-gray-400">
-              Spreading the word of God in Sandnes and beyond.
-            </p>
+    <div className="w-full bg-[#e1dbcb]">
+      <div className="p-16 max-w-7xl mx-auto">
+        <div className="flex flex-col bg-footer bg-cover bg-center">
+          <div className="flex flex-col lg:flex-row gap-16">
+            <div className="flex-1 max-w-[350px]">
+              <h1 className="text-2xl mb-8">Faith Baptist Church</h1>
+              <div className="text-lg">
+                Our Church is a family — a place you can call home. It's where
+                you can find hope, healing, and purpose.
+              </div>
+              <div className="flex gap-6 items-center cursor-pointer my-8">
+                <CgFacebook
+                  fontSize={18}
+                  className="hover:text-[#832732]"
+                ></CgFacebook>
+                <CgInstagram
+                  fontSize={18}
+                  className="hover:text-[#832732]"
+                ></CgInstagram>
+                <FaYoutube
+                  fontSize={18}
+                  className="hover:text-[#832732]"
+                ></FaYoutube>
+              </div>
+            </div>
+            <div className="text-lg">
+              <h1 className="text-2xl mb-8">Visit us</h1>
+              <p>Faith Baptist Church</p>
+              <p>Sandnes</p>
+              <p>Norway</p>
+              <p>Email: paulkalai@gmail.com</p>
+            </div>
+            <div className="flex-1">
+              <h1 className="text-2xl mb-8">Stay Tuned</h1>
+              <div className="mb-4 text-lg">
+                Subscribe to our newsletter and never miss our news
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+                <Input></Input>
+                <Button label="Subscribe" className="px-20"></Button>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Contact
-                </a>
-              </li>
-            </ul>
+          <div className="flex flex-row justify-center items-center mt-20">
+            <div className="flex flex-col">
+              <div className="text-lg">
+                All Rights Reserved, Faith Baptist Church, Sandnes.
+                {new Date().getFullYear()}
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Address: Church Street, Sandnes</li>
-              <li>Phone: +47 XXX XX XXX</li>
-              <li>Email: info@faithbaptistsandnes.no</li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} Faith Baptist Church, Sandnes. All
-            rights reserved.
-          </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

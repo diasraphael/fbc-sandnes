@@ -24,11 +24,12 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Features
 
-- Next.js 14 with App Router
+- Next.js 14 dev server instead of our current vite dev server
 - TypeScript
 - Tailwind CSS
 - ESLint
-- Turbopack for faster development
+- Turbopack for faster development as build tool instead of our current Rollup + esbuild
+- Autoprefixer - before You had to manually write vendor prefixes, with autoprefixer You just write the standard CSS. Autoprefixer automatically generates the prefixed versions based on your browser support requirements.
 
 ## Project Structure
 

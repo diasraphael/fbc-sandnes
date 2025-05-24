@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-family-sans: Inter, sans-serif;
+  --font-family-serif: "Playfair Display", serif;
+
+  --color-background-landing: linear-gradient(
+      rgba(35, 25, 23, 0.48),
+      rgba(35, 25, 23, 0.48)
+    ),
+    url(/landing.jpg);
+  --color-background-interior: linear-gradient(
+      rgba(35, 25, 23, 0.48),
+      rgba(35, 25, 23, 0.48)
+    ),
+    url(/interior.jpg);
+  --color-background-church: linear-gradient(
+      rgba(35, 25, 23, 0.48),
+      rgba(35, 25, 23, 0.48)
+    ),
+    url(/church.jpg);
+  --color-background-footer: linear-gradient(
+      rgba(225, 219, 203, 0.97),
+      rgba(225, 219, 203, 0.97)
+    ),
+    url(/footer.webp);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility bg-landing {
+  background-image: var(--color-background-landing);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility bg-interior {
+  background-image: var(--color-background-interior);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility bg-church {
+  background-image: var(--color-background-church);
+}
+
+@utility bg-footer {
+  background-image: var(--color-background-footer);
 }
