@@ -18,15 +18,15 @@ export default function Footer() {
               </div>
               <div className="flex gap-6 items-center cursor-pointer my-8">
                 <CgFacebook
-                  fontSize={18}
+                  fontSize={24}
                   className="hover:text-[#832732]"
                 ></CgFacebook>
                 <CgInstagram
-                  fontSize={18}
+                  fontSize={24}
                   className="hover:text-[#832732]"
                 ></CgInstagram>
                 <FaYoutube
-                  fontSize={18}
+                  fontSize={24}
                   className="hover:text-[#832732]"
                 ></FaYoutube>
               </div>
@@ -34,8 +34,10 @@ export default function Footer() {
             <div className="text-lg">
               <h1 className="text-2xl mb-8">Visit us</h1>
               <p>Faith Baptist Church</p>
-              <p>Sandnes</p>
+              <p>Erling Skjalgssons gate 13</p>
+              <p>4307 Sandnes</p>
               <p>Norway</p>
+              <p>Phone: +47 48290578</p>
               <p>Email: paulkalai@gmail.com</p>
             </div>
             <div className="flex-1">
