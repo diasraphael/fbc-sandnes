@@ -45,7 +45,7 @@ export default function Footer() {
               <div className="mb-4 text-lg">
                 Subscribe to our newsletter and never miss our news
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
                 <Input></Input>
                 <Button label="Subscribe" className="px-20"></Button>
               </div>
