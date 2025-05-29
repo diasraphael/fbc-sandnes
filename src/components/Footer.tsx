@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="flex-1 max-w-[350px]">
               <h1 className="text-2xl mb-8">Faith Baptist Church</h1>
-              <div className="text-lg">
+              <div className="text-base">
                 Our Church is a family — a place you can call home. It&apos;s
                 where you can find hope, healing, and purpose.
               </div>
@@ -31,18 +31,20 @@ export default function Footer() {
                 ></FaYoutube>
               </div>
             </div>
-            <div className="text-lg">
+            <div>
               <h1 className="text-2xl mb-8">Visit us</h1>
-              <p>Faith Baptist Church</p>
-              <p>Erling Skjalgssons gate 13</p>
-              <p>4307 Sandnes</p>
-              <p>Norway</p>
-              <p>Phone: +47 48290578</p>
-              <p>Email: paulkalai@gmail.com</p>
+              <div className="text-base">
+                <p>Faith Baptist Church</p>
+                <p>Erling Skjalgssons gate 13</p>
+                <p>4307 Sandnes</p>
+                <p>Norway</p>
+                <p>Phone: +47 48290578</p>
+                <p>Email: paulkalai@gmail.com</p>
+              </div>
             </div>
             <div className="flex-1">
               <h1 className="text-2xl mb-8">Stay Tuned</h1>
-              <div className="mb-4 text-lg">
+              <div className="mb-4 text-base">
                 Subscribe to our newsletter and never miss our news
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
@@ -53,8 +55,8 @@ export default function Footer() {
           </div>
           <div className="flex flex-row justify-center items-center mt-20">
             <div className="flex flex-col">
-              <div className="text-lg">
-                All Rights Reserved, Faith Baptist Church, Sandnes.
+              <div className="text-base">
+                All Rights Reserved @ Faith Baptist Church, Sandnes{" "}
                 {new Date().getFullYear()}
               </div>
             </div>
