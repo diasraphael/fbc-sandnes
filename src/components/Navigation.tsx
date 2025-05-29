@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,11 +24,12 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className="absolute top-8 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="text-white text-2xl font-bold">FBC Sandnes</div>
-
+          <div className="flex items-center h-full">
+            <Image src="/logo.png" alt="logo" width={90} height={40} />
+          </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
