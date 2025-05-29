@@ -47,9 +47,14 @@ export default function Footer() {
               <div className="mb-4 text-base">
                 Subscribe to our newsletter and never miss our news
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
-                <Input></Input>
-                <Button label="Subscribe" className="px-20"></Button>
+              <div className="flex flex-col sm:flex-row items-center pt-4 w-full">
+                <div className="flex-1 sm:mr-4 w-full">
+                  <Input></Input>
+                </div>
+                <Button
+                  label="Subscribe"
+                  className="mt-10 w-full sm:w-auto sm:mt-0"
+                ></Button>
               </div>
             </div>
           </div>

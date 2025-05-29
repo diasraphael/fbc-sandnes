@@ -27,7 +27,7 @@ const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       name={name}
       required={required}
-      className={`w-full h-full sm:w-64 px-6 py-[18px] border-[1px] border-[#f5f3f1] focus:outline-none focus:border-[#832732] leading-[1.2em] bg-transparent outline-none ${className}`}
+      className={`w-full h-full px-6 py-[18px] border-[1px] border-[#f5f3f1] focus:outline-none focus:border-[#832732] leading-[1.2em] bg-transparent outline-none ${className}`}
     />
   );
 };
