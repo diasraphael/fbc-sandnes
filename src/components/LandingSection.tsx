@@ -2,8 +2,9 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import Button from "./button/Button";
 
-const images = ["/interior.jpg", "/landing.jpg", "/church.jpg"];
+const images = ["/interior.jpg", "/landing.jpg"];
 
 export default function LandingSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -85,9 +86,7 @@ export default function LandingSection() {
             Worry Ends When Faith Begins. The Magnificent Story of a
             Life-Changing Journey to God.
           </p>
-          <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all">
-            Explore now
-          </button>
+          <Button label="Explore now" />
         </div>
       </div>
     </div>
