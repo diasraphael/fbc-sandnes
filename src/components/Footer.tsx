@@ -18,16 +18,16 @@ export default function Footer() {
               </div>
               <div className="flex gap-6 items-center cursor-pointer my-8">
                 <CgFacebook
-                  fontSize={24}
-                  className="hover:text-[#832732]"
+                  fontSize={20}
+                  className="text-[#832732] hover:text-[black]"
                 ></CgFacebook>
                 <CgInstagram
-                  fontSize={24}
-                  className="hover:text-[#832732]"
+                  fontSize={20}
+                  className="text-[#832732] hover:text-[black]"
                 ></CgInstagram>
                 <FaYoutube
-                  fontSize={24}
-                  className="hover:text-[#832732]"
+                  fontSize={20}
+                  className="text-[#832732] hover:text-[black]"
                 ></FaYoutube>
               </div>
             </div>

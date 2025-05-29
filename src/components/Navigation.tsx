@@ -47,7 +47,7 @@ export default function Navigation() {
           {/* Hamburger Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 relative z-50"
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 relative z-50 cursor-pointer"
           >
             <span
               className={`block w-6 h-0.5 bg-white transition-all duration-300 ease-out ${

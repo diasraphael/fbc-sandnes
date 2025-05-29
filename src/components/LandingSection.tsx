@@ -9,7 +9,11 @@ const images = ["/interior.jpg", "/landing.jpg"];
 export default function LandingSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [scale, setScale] = useState(1);
+  const [typedText, setTypedText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const animationRef = useRef<number | undefined>(undefined);
+
+  const fullText = "Faith Baptist Church, Sandnes";
 
   useEffect(() => {
     let startTime: number;
@@ -33,18 +37,42 @@ export default function LandingSection() {
     setScale(1);
     animationRef.current = requestAnimationFrame(animate);
 
-    // Change image every 4 seconds
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [currentImageIndex]);
+
+  useEffect(() => {
+    const duration = 4000; // 4 seconds
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, duration);
 
     return () => {
       clearInterval(interval);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
     };
-  }, [currentImageIndex]);
+  }, []);
+
+  // Typewriter effect
+  useEffect(() => {
+    if (typedText.length < fullText.length) {
+      // Add slight variation in timing for more natural feel
+      const baseDelay = 60; // Faster base speed
+      const variation = Math.random() * 40; // 0-40ms random variation
+      const delay = baseDelay + variation;
+
+      const timeout = setTimeout(() => {
+        setTypedText(fullText.slice(0, typedText.length + 1));
+      }, delay);
+
+      return () => clearTimeout(timeout);
+    } else {
+      setIsTypingComplete(true);
+    }
+  }, [typedText, fullText]);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -76,17 +104,26 @@ export default function LandingSection() {
       {/* Overlay gradient - more subtle */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
 
-      {/* Content with fade-in animation */}
-      <div className="relative h-full flex items-center animate-fade-in">
+      {/* Static content that doesn't change */}
+      <div className="relative h-full flex items-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            God is with Us, God Loves Us.
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 transition-all duration-150 ease-out">
+            {typedText}
+            <span
+              className={`${
+                isTypingComplete ? "animate-pulse" : "animate-ping"
+              } text-white`}
+            >
+              |
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-            Worry Ends When Faith Begins. The Magnificent Story of a
-            Life-Changing Journey to God.
+          <p className="text-xl md:text-xl text-white/90 mb-8 max-w-2xl">
+            Come as You Are, Leave Transformed. Experience the Power of
+            Community, Prayer, and God&apos;s Unwavering Love in Every Service.
           </p>
-          <Button label="Explore now" />
+          <div>
+            <Button label="Join Us Today" />
+          </div>
         </div>
       </div>
     </div>
