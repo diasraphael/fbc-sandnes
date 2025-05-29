@@ -67,18 +67,33 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-0 bg-[#e1dbcb] transition-all duration-300 ease-out z-40 ${
-            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          className={`md:hidden fixed inset-0 bg-[#e1dbcb] transition-all duration-500 ease-in-out z-40 ${
+            isMenuOpen
+              ? "opacity-100 visible scale-100"
+              : "opacity-0 invisible scale-95"
           }`}
         >
           {/* Centered Menu Items */}
           <div className="flex items-center justify-center h-full">
-            <div className="space-y-8 text-center">
-              {menuItems.map((item) => (
+            <div
+              className={`space-y-8 text-center transition-all duration-700 ease-out ${
+                isMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+            >
+              {menuItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-[#832732] hover:text-black transition-colors duration-300 ease-out text-2xl font-medium"
+                  className={`block text-[#832732] hover:text-black transition-all duration-300 ease-out text-2xl font-medium transform ${
+                    isMenuOpen
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
+                  }}
                   onClick={handleMenuClick}
                 >
                   {item.name}
