@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import LandingSection from "@/components/LandingSection";
+import ServiceTimes from "@/components/ServiceTimes";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
     <div className="relative">
       <Navigation />
       <LandingSection />
+      <ServiceTimes />
       <Footer />
     </div>
   );
