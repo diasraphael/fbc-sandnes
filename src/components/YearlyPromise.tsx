@@ -46,7 +46,7 @@ export default function YearlyPromise() {
             </motion.span>
 
             <motion.h3
-              className="text-2xl md:text-3xl text-[#832732] mb-8 font-light tracking-wide"
+              className="text-2xl md:text-3xl text-[#832732] mb-16 font-light tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -100,60 +100,6 @@ export default function YearlyPromise() {
               <p className="text-[#832732] font-semibold text-lg tracking-wide">
                 Jeremiah 33:6
               </p>
-            </motion.div>
-          </motion.div>
-          {/* Enhanced Bottom Quote Card */}
-          <motion.div
-            className="mt-20 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-2xl border border-white/50 relative overflow-hidden"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Card Background Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#832732]/5 to-transparent"></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#832732]/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-
-              <div className="relative z-10">
-                <motion.blockquote
-                  className="text-2xl md:text-3xl lg:text-4xl font-light text-[#832732] italic text-center leading-relaxed mb-6"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.7, delay: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  &ldquo;Every new beginning comes from some other
-                  beginning&apos;s end&rdquo;
-                </motion.blockquote>
-
-                <motion.div
-                  className="flex items-center justify-center gap-4 mb-6"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#832732] to-transparent"></div>
-                  <div className="w-3 h-3 bg-[#832732] rounded-full"></div>
-                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#832732] to-transparent"></div>
-                </motion.div>
-
-                <motion.p
-                  className="text-gray-700 text-lg md:text-xl text-center leading-relaxed font-light"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                  viewport={{ once: true }}
-                >
-                  Let this year be the beginning of deeper faith, stronger
-                  community, and endless hope.
-                </motion.p>
-              </div>
             </motion.div>
           </motion.div>
         </div>
