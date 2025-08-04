@@ -2,8 +2,9 @@ import Navigation from "@/components/Navigation";
 import LandingSection from "@/components/LandingSection";
 import ServiceTimes from "@/components/ServiceTimes";
 import YearlyPromise from "@/components/YearlyPromise";
-import LatestSermon from "@/components/LatestSermon";
 import UpcomingEvents from "@/components/UpcomingEvents";
+import LatestSermon from "@/components/LatestSermon";
+import PastorSection from "@/components/PastorSection";
 import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
@@ -18,6 +19,7 @@ export default function HomePage() {
         <YearlyPromise />
         <UpcomingEvents />
         <LatestSermon />
+        <PastorSection />
         <LocationMap />
         <Footer />
       </div>
