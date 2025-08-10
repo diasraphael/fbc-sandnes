@@ -46,7 +46,7 @@ export default function YearlyPromise() {
             </motion.span>
 
             <motion.h3
-              className="text-2xl md:text-3xl text-[#832732] mb-16 font-light tracking-wide"
+              className="text-xl md:text-2xl text-[#832732] mb-12 font-light tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -55,9 +55,9 @@ export default function YearlyPromise() {
               God&apos;s Promise for This Year
             </motion.h3>
 
-            <motion.div className="relative mb-10">
+            <motion.div className="relative mb-8">
               <motion.h2
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-[#832732] via-[#a63042] to-[#832732] bg-clip-text text-transparent mb-6 leading-tight font-serif"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-[#832732] via-[#a63042] to-[#832732] bg-clip-text text-transparent mb-4 leading-tight font-serif"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -69,7 +69,7 @@ export default function YearlyPromise() {
 
               {/* Decorative quote marks */}
               <motion.div
-                className="absolute -top-4 -left-4 md:-left-8 text-6xl md:text-8xl text-[#832732]/20 font-serif"
+                className="absolute -top-3 -left-3 md:-left-6 text-4xl md:text-6xl text-[#832732]/20 font-serif"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
@@ -78,7 +78,7 @@ export default function YearlyPromise() {
                 &ldquo;
               </motion.div>
               <motion.div
-                className="absolute -bottom-8 -right-4 md:-right-8 text-6xl md:text-8xl text-[#832732]/20 font-serif"
+                className="absolute -bottom-6 -right-3 md:-right-6 text-4xl md:text-6xl text-[#832732]/20 font-serif"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 }}
@@ -89,7 +89,7 @@ export default function YearlyPromise() {
             </motion.div>
 
             <motion.div
-              className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-[#832732]/20 shadow-lg"
+              className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[#832732]/20 shadow-lg"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -97,7 +97,7 @@ export default function YearlyPromise() {
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
-              <p className="text-[#832732] font-semibold text-lg tracking-wide">
+              <p className="text-[#832732] font-semibold text-base tracking-wide">
                 Jeremiah 33:6
               </p>
             </motion.div>

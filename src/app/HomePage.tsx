@@ -18,8 +18,8 @@ export default function HomePage() {
         <LandingSection />
         <ServiceTimes />
         <DailyVerse />
-        <YearlyPromise />
         <UpcomingEvents />
+        <YearlyPromise />
         <LatestSermon />
         <PastorSection />
         <LocationMap />
