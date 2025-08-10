@@ -9,8 +9,8 @@ export default function YearlyPromise() {
       className="bg-white py-20 md:py-28 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Pattern - Very Subtle */}
       <div className="absolute inset-0 opacity-20">
@@ -23,22 +23,21 @@ export default function YearlyPromise() {
           {/* Section Header */}
           <motion.div
             className="mb-12"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <motion.span
               className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-8 shadow-lg shadow-[#832732]/20 border border-white/20"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.6,
-                delay: 0.4,
-                type: "spring",
-                bounce: 0.4,
+                duration: 0.4,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.8 }}
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <span className="relative z-10">2025 Promise</span>
@@ -47,10 +46,10 @@ export default function YearlyPromise() {
 
             <motion.h3
               className="text-xl md:text-2xl text-[#832732] mb-12 font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               God&apos;s Promise for This Year
             </motion.h3>
@@ -60,8 +59,8 @@ export default function YearlyPromise() {
                 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-[#832732] via-[#a63042] to-[#832732] bg-clip-text text-transparent mb-4 leading-tight font-serif"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 Nevertheless, I will bring health and healing to it; I will heal
                 my people and will let them enjoy abundant peace and security.
@@ -72,8 +71,8 @@ export default function YearlyPromise() {
                 className="absolute -top-3 -left-3 md:-left-6 text-4xl md:text-6xl text-[#832732]/20 font-serif"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.6, ease: "backOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 &ldquo;
               </motion.div>
@@ -81,8 +80,8 @@ export default function YearlyPromise() {
                 className="absolute -bottom-6 -right-3 md:-right-6 text-4xl md:text-6xl text-[#832732]/20 font-serif"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.7, ease: "backOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 &rdquo;
               </motion.div>
@@ -90,10 +89,14 @@ export default function YearlyPromise() {
 
             <motion.div
               className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[#832732]/20 shadow-lg"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.8,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              viewport={{ once: true, amount: 0.3 }}
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <div className="w-2 h-2 bg-[#832732] rounded-full"></div>

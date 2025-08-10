@@ -189,8 +189,8 @@ export default function UpcomingEvents() {
       className="bg-white py-16 md:py-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Pattern - Very Subtle */}
       <div className="absolute inset-0 opacity-20">
@@ -203,22 +203,21 @@ export default function UpcomingEvents() {
           {/* Header */}
           <motion.div
             className="text-center mb-10 md:mb-12"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <motion.span
               className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-6 shadow-lg shadow-[#832732]/20 border border-white/20"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.6,
-                delay: 0.4,
-                type: "spring",
-                bounce: 0.4,
+                duration: 0.4,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.8 }}
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <span className="relative z-10">Upcoming Events</span>
@@ -227,20 +226,20 @@ export default function UpcomingEvents() {
 
             <motion.h3
               className="text-xl md:text-2xl text-[#832732] mb-6 font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               Join Us for Worship & Fellowship
             </motion.h3>
 
             <motion.p
               className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               Come together as a community to worship, learn, and grow in faith.
               All are welcome to join our regular services and special events.
@@ -250,34 +249,37 @@ export default function UpcomingEvents() {
           {/* Events List */}
           <motion.div
             className="space-y-6"
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.15,
-                  delayChildren: 0.2,
-                },
-              },
-            }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {sortedEvents.map((event, index) => (
               <motion.div
                 key={event.id}
                 className="relative group"
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: { opacity: 1, y: 0 },
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.6 + index * 0.1,
+                  ease: "easeOut",
                 }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ y: -3 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {/* Event Card */}
-                <div className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-4 md:p-6 border border-gray-100/50 group-hover:border-[#832732]/20 group-hover:shadow-[#832732]/10">
+                <motion.div
+                  className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-4 md:p-6 border border-gray-100/50 group-hover:border-[#832732]/20 group-hover:shadow-[#832732]/10"
+                  initial={{ scale: 0.95 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.7 + index * 0.1,
+                    ease: [0.23, 1, 0.32, 1],
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-[#832732]/5 to-[#a63042]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -285,8 +287,15 @@ export default function UpcomingEvents() {
                     {/* Date Display */}
                     <motion.div
                       className="flex-shrink-0"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.8 + index * 0.1,
+                        ease: "backOut",
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
                       whileHover={{ scale: 1.03, rotate: 1 }}
-                      transition={{ type: "spring", stiffness: 300 }}
                     >
                       <div className="bg-gradient-to-br from-[#832732] to-[#a63042] text-white p-4 md:p-5 rounded-2xl shadow-lg relative overflow-hidden group-hover:shadow-xl transition-shadow duration-500">
                         {/* Background pattern */}
@@ -311,20 +320,28 @@ export default function UpcomingEvents() {
                     <div className="flex-1 min-w-0">
                       <motion.h4
                         className="text-lg md:text-xl font-light text-[#832732] mb-3 group-hover:text-[#a63042] transition-colors duration-300 tracking-wide"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
-                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 0.9 + index * 0.1,
+                          ease: "easeOut",
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
                       >
                         {event.title}
                       </motion.h4>
 
                       <motion.div
                         className="flex flex-wrap items-center gap-4 mb-3"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
-                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 1.0 + index * 0.1,
+                          ease: "easeOut",
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
                       >
                         <div className="flex items-center gap-2 text-gray-700">
                           <div className="w-1.5 h-1.5 bg-[#832732] rounded-full"></div>
@@ -340,10 +357,14 @@ export default function UpcomingEvents() {
 
                       <motion.div
                         className="flex items-center gap-2 text-gray-600 mb-3"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
-                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 1.1 + index * 0.1,
+                          ease: "easeOut",
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
                       >
                         <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
                         <span className="text-sm">{event.location}</span>
@@ -359,13 +380,14 @@ export default function UpcomingEvents() {
                       {event.description && (
                         <motion.p
                           className="text-gray-600 text-sm leading-relaxed"
-                          initial={{ opacity: 0, x: 30 }}
+                          initial={{ opacity: 0, x: 20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
-                            duration: 0.6,
-                            delay: index * 0.1 + 0.7,
+                            duration: 0.4,
+                            delay: 1.2 + index * 0.1,
+                            ease: "easeOut",
                           }}
-                          viewport={{ once: true }}
+                          viewport={{ once: true, amount: 0.3 }}
                         >
                           {event.description}
                         </motion.p>
@@ -375,10 +397,14 @@ export default function UpcomingEvents() {
                     {/* Action Button */}
                     <motion.div
                       className="flex-shrink-0"
-                      initial={{ opacity: 0, x: 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 + 0.8 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 1.3 + index * 0.1,
+                        ease: [0.23, 1, 0.32, 1],
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
                     >
                       <motion.button
                         className="bg-gradient-to-r from-[#832732] to-[#a63042] hover:from-[#a63042] hover:to-[#832732] text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#832732]/25 min-w-[120px] relative overflow-hidden border border-white/20"
@@ -391,7 +417,7 @@ export default function UpcomingEvents() {
                       </motion.button>
                     </motion.div>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>

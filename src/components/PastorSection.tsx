@@ -9,8 +9,8 @@ export default function PastorSection() {
       className="bg-white py-20 md:py-28 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Pattern - Very Subtle */}
       <div className="absolute inset-0 opacity-20">
@@ -23,22 +23,21 @@ export default function PastorSection() {
           {/* Header */}
           <motion.div
             className="text-center mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <motion.span
               className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-8 shadow-lg shadow-[#832732]/20 border border-white/20"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.6,
-                delay: 0.4,
-                type: "spring",
-                bounce: 0.4,
+                duration: 0.4,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.8 }}
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <span className="relative z-10">Our Pastor</span>
@@ -47,20 +46,20 @@ export default function PastorSection() {
 
             <motion.h3
               className="text-2xl md:text-3xl text-[#832732] mb-8 font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               Meet Our Spiritual Leader
             </motion.h3>
 
             <motion.p
               className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               Dedicated to serving our community with love, wisdom, and
               unwavering faith in God&apos;s calling.
@@ -70,23 +69,30 @@ export default function PastorSection() {
           {/* Pastor Content */}
           <motion.div
             className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-center"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {/* Pastor Image */}
             <motion.div
               className="relative lg:col-span-1"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
               whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <motion.div
                 className="relative bg-gray-100/60 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 aspect-[3/4] max-w-sm mx-auto"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ scale: 0.95 }}
+                whileInView={{ scale: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.7,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <Image
                   src="/kalai.jpg"
@@ -108,8 +114,8 @@ export default function PastorSection() {
                 className="absolute -bottom-6 left-6 right-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200/50">
                   <h4 className="text-xl font-semibold bg-gradient-to-r from-[#832732] to-[#a63042] bg-clip-text text-transparent text-center">
@@ -125,16 +131,19 @@ export default function PastorSection() {
             {/* Pastor Information */}
             <motion.div
               className="space-y-6 lg:col-span-2"
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               {/* Bio */}
               <motion.div
                 className="bg-gray-50/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200/50"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
               >
                 <h4 className="text-xl font-semibold text-[#832732] mb-4 flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
@@ -157,8 +166,8 @@ export default function PastorSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200/50"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <h4 className="text-xl font-semibold text-[#832732] mb-4 flex items-center gap-3">
@@ -167,8 +176,12 @@ export default function PastorSection() {
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <motion.a
-                    href="mailto:pastor@fbcsandnes.no"
+                    href="mailto:paulkalai@gmail.com"
                     className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 1.0, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -191,8 +204,12 @@ export default function PastorSection() {
                   </motion.a>
 
                   <motion.a
-                    href="tel:+4712345678"
+                    href="tel:+4748290578"
                     className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 1.1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -216,46 +233,6 @@ export default function PastorSection() {
           </motion.div>
         </div>
       </div>
-
-      {/* Enhanced Decorative Elements - same as previous components */}
-      <motion.div
-        className="absolute top-12 left-8 w-24 h-24 opacity-60"
-        initial={{ scale: 0, opacity: 0, rotate: -180 }}
-        whileInView={{ scale: 1, opacity: 0.6, rotate: 0 }}
-        transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <div className="w-full h-full bg-gradient-to-br from-[#832732]/20 to-[#a63042]/10 rounded-full shadow-lg"></div>
-        <div className="absolute inset-2 bg-gradient-to-tl from-white/30 to-transparent rounded-full"></div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-12 right-8 w-20 h-20 opacity-50"
-        initial={{ scale: 0, opacity: 0, rotate: 180 }}
-        whileInView={{ scale: 1, opacity: 0.5, rotate: 0 }}
-        transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <div className="w-full h-full bg-gradient-to-tl from-[#832732]/15 to-[#a63042]/5 rounded-full shadow-lg"></div>
-        <div className="absolute inset-2 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-      </motion.div>
-
-      {/* Additional floating elements */}
-      <motion.div
-        className="absolute top-1/3 right-16 w-3 h-3 bg-[#832732]/30 rounded-full"
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
-      />
-
-      <motion.div
-        className="absolute bottom-1/4 left-16 w-2 h-2 bg-[#832732]/40 rounded-full"
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 0.4 }}
-        transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      />
     </motion.section>
   );
 }

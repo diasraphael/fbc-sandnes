@@ -13,8 +13,8 @@ export default function LocationMap() {
       className="bg-white py-16 md:py-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Pattern - Very Subtle */}
       <div className="absolute inset-0 opacity-20">
@@ -27,22 +27,21 @@ export default function LocationMap() {
           {/* Header */}
           <motion.div
             className="text-center mb-10 md:mb-12"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <motion.span
               className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-6 shadow-lg shadow-[#832732]/20 border border-white/20"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.6,
-                delay: 0.4,
-                type: "spring",
-                bounce: 0.4,
+                duration: 0.4,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.8 }}
               whileHover={{ scale: 1.05, y: -2 }}
             >
               <span className="relative z-10">Find Us</span>
@@ -51,20 +50,20 @@ export default function LocationMap() {
 
             <motion.h3
               className="text-xl md:text-2xl text-[#832732] mb-6 font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               Visit Our Church
             </motion.h3>
 
             <motion.p
               className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               We&apos;d love to welcome you to our church family. Come join us
               for worship and fellowship.
@@ -74,23 +73,30 @@ export default function LocationMap() {
           {/* Map and info container */}
           <motion.div
             className="grid lg:grid-cols-3 gap-8 items-start"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {/* Map */}
             <motion.div
               className="lg:col-span-2"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <motion.div
                 className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-100/50 group hover:shadow-xl transition-all duration-500"
+                initial={{ scale: 0.95 }}
+                whileInView={{ scale: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.7,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ y: -4 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#832732]/5 to-[#a63042]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -114,13 +120,20 @@ export default function LocationMap() {
               className="lg:col-span-1"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <motion.div
                 className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100/50 group hover:shadow-xl transition-all duration-500 relative overflow-hidden"
+                initial={{ scale: 0.95 }}
+                whileInView={{ scale: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.8,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ y: -4 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#832732]/5 to-[#a63042]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -128,10 +141,10 @@ export default function LocationMap() {
                 <div className="relative z-10">
                   <motion.h4
                     className="text-lg md:text-xl font-light text-[#832732] mb-6 group-hover:text-[#a63042] transition-colors duration-300 tracking-wide"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.0 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
                   >
                     Faith Baptist Church
                   </motion.h4>
@@ -139,10 +152,14 @@ export default function LocationMap() {
                   <div className="space-y-6">
                     <motion.div
                       className="flex items-start gap-3"
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 1.1 }}
-                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 1.0,
+                        ease: "easeOut",
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
                     >
                       <div className="w-2 h-2 bg-[#832732] rounded-full mt-2 flex-shrink-0"></div>
                       <div>
@@ -159,8 +176,12 @@ export default function LocationMap() {
                       className="border-t border-gray-200/50 pt-6"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 1.2 }}
-                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 1.1,
+                        ease: "easeOut",
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
                     >
                       <p className="text-sm text-gray-500 mb-4">
                         Need directions?
@@ -170,9 +191,16 @@ export default function LocationMap() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-[#832732] to-[#a63042] hover:from-[#a63042] hover:to-[#832732] text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#832732]/25 relative overflow-hidden border border-white/20 group"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 1.2,
+                          ease: [0.23, 1, 0.32, 1],
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
                         whileHover={{ scale: 1.03, y: -1 }}
                         whileTap={{ scale: 0.97 }}
-                        transition={{ type: "spring", stiffness: 400 }}
                       >
                         <span className="relative z-10 flex items-center gap-2">
                           <FiMapPin className="w-4 h-4" />

@@ -25,8 +25,8 @@ export default function DailyVerse() {
       className="bg-white py-12 md:py-16 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Pattern - Very Subtle */}
       <div className="absolute inset-0 opacity-20">
@@ -36,41 +36,29 @@ export default function DailyVerse() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Enhanced Header */}
+          {/* Header */}
           <motion.div
             className="mb-8"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
-            <motion.div
-              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white rounded-full shadow-xl shadow-[#832732]/25 border border-white/30 backdrop-blur-sm relative overflow-hidden group"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+            <motion.span
+              className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-6 shadow-lg shadow-[#832732]/20 border border-white/20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.6,
-                delay: 0.3,
-                type: "spring",
-                bounce: 0.4,
+                duration: 0.4,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1], // Premium easing curve
               }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -3 }}
+              viewport={{ once: true, amount: 0.8 }}
+              whileHover={{ scale: 1.05, y: -2 }}
             >
-              {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              <span className="relative z-10 text-sm font-medium tracking-wide">
-                God&apos;s Word for Today
-              </span>
-
-              {/* Sparkle effect */}
-              <motion.div
-                className="absolute top-1 right-1 w-1 h-1 bg-white rounded-full"
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-              ></motion.div>
-            </motion.div>
+              <span className="relative z-10">God&apos;s Word for Today</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-full"></div>
+            </motion.span>
           </motion.div>
 
           {/* Beautiful Verse Display */}
@@ -78,16 +66,33 @@ export default function DailyVerse() {
             className="max-w-2xl mx-auto relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {/* Decorative frame */}
             <div className="absolute -inset-2 bg-gradient-to-r from-[#832732]/5 via-transparent to-[#a63042]/5 rounded-xl blur-lg"></div>
 
             {/* Main content area */}
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-lg shadow-[#832732]/10 border border-white/50">
+            <motion.div
+              className="relative bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-lg shadow-[#832732]/10 border border-white/50"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.4,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ y: -2 }}
+            >
               {/* Top decoration */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <motion.div
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.6, ease: "backOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="w-8 h-8 bg-gradient-to-br from-[#832732] to-[#a63042] rounded-full flex items-center justify-center shadow-md">
                   <svg
                     className="w-4 h-4 text-white"
@@ -103,20 +108,24 @@ export default function DailyVerse() {
                     />
                   </svg>
                 </div>
-              </div>
+              </motion.div>
 
               {/* DailyVerses.net widget container */}
-              <div
+              <motion.div
                 id="dailyVersesWrapper"
                 className="daily-verse-content relative z-10 pt-2 min-h-[60px]"
-              ></div>
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.7, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              ></motion.div>
 
               {/* Loading state */}
               <motion.div
                 className="loading-state text-gray-400 italic text-sm absolute inset-0 flex flex-col items-center justify-center"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 3 }}
+                transition={{ duration: 0.3, delay: 3 }}
                 style={{ pointerEvents: "none" }}
               >
                 <div className="flex items-center justify-center gap-1">
@@ -140,14 +149,20 @@ export default function DailyVerse() {
               </motion.div>
 
               {/* Bottom decoration */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+              <motion.div
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="flex gap-1">
                   <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#832732] to-[#a63042] rounded-full shadow-sm"></div>
                   <div className="w-1 h-1 bg-gradient-to-br from-[#a63042] to-[#832732] rounded-full shadow-sm mt-0.5"></div>
                   <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#832732] to-[#a63042] rounded-full shadow-sm"></div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
