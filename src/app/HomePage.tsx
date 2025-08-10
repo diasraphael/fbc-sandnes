@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import LandingSection from "@/components/LandingSection";
 import ServiceTimes from "@/components/ServiceTimes";
+import DailyVerse from "@/components/DailyVerse";
 import YearlyPromise from "@/components/YearlyPromise";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import LatestSermon from "@/components/LatestSermon";
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Navigation />
         <LandingSection />
         <ServiceTimes />
+        <DailyVerse />
         <YearlyPromise />
         <UpcomingEvents />
         <LatestSermon />
