@@ -192,10 +192,10 @@ export default function UpcomingEvents() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-[#832732]/5 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-l from-[#832732]/3 to-transparent rounded-full blur-3xl"></div>
+      {/* Background Pattern - Very Subtle */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#832732]/3 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-l from-[#a63042]/2 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

@@ -22,23 +22,16 @@ export default function DailyVerse() {
 
   return (
     <motion.section
-      className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-12 md:py-16 relative overflow-hidden"
+      className="bg-white py-12 md:py-16 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Enhanced Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#832732]/5 via-transparent to-[#a63042]/5"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#832732]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-[#a63042]/8 to-transparent rounded-full blur-2xl"></div>
-
-        {/* Decorative shapes */}
-        <div className="absolute top-10 right-10 w-20 h-20 border border-[#832732]/20 rounded-full"></div>
-        <div className="absolute bottom-20 left-20 w-16 h-16 bg-gradient-to-br from-[#832732]/10 to-[#a63042]/10 rounded-lg rotate-45"></div>
-        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-[#832732] rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 left-1/2 w-1 h-1 bg-[#a63042] rounded-full"></div>
+      {/* Background Pattern - Very Subtle */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#832732]/3 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-l from-[#a63042]/2 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
