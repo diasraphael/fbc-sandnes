@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function PastorSection() {
   return (
@@ -87,10 +88,12 @@ export default function PastorSection() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" // Professional pastor image sample
-                  alt="Pastor John Smith"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/kalai.jpg"
+                  alt="Pastor Paul Kalai"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
 
                 {/* Overlay gradient */}
@@ -110,10 +113,10 @@ export default function PastorSection() {
               >
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200/50">
                   <h4 className="text-xl font-semibold bg-gradient-to-r from-[#832732] to-[#a63042] bg-clip-text text-transparent text-center">
-                    Pastor John Smith
+                    Pastor Paul Kalai
                   </h4>
                   <p className="text-gray-600 text-center text-sm mt-1">
-                    Lead Pastor since 2015
+                    Lead Pastor since 2025
                   </p>
                 </div>
               </motion.div>
@@ -135,17 +138,16 @@ export default function PastorSection() {
               >
                 <h4 className="text-xl font-semibold text-[#832732] mb-4 flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
-                  About Pastor John
+                  About Pastor Paul Kalai
                 </h4>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Pastor John has been faithfully serving our community for over
-                  8 years. With a heart for evangelism and discipleship, he
-                  leads our congregation with wisdom, compassion, and unwavering
-                  dedication to God&apos;s word.
+                  Pastor Paul Kalai has been faithfully serving our community
+                  for over 8 years. With a heart for evangelism and
+                  discipleship, he leads our congregation with wisdom,
+                  compassion, and unwavering dedication to God&apos;s word.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  He holds a Master of Divinity from Seminary College and has
-                  been instrumental in growing our church family and
+                  He has been instrumental in growing our church family and
                   strengthening our community outreach programs.
                 </p>
               </motion.div>
@@ -161,7 +163,7 @@ export default function PastorSection() {
               >
                 <h4 className="text-xl font-semibold text-[#832732] mb-4 flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
-                  Connect with Pastor John
+                  Connect with Pastor Paul Kalai
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <motion.a
@@ -183,7 +185,7 @@ export default function PastorSection() {
                     <div>
                       <p className="text-sm font-medium text-gray-900">Email</p>
                       <p className="text-xs text-gray-600">
-                        pastor@fbcsandnes.no
+                        paulkalai@gmail.com
                       </p>
                     </div>
                   </motion.a>
@@ -205,7 +207,7 @@ export default function PastorSection() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">Phone</p>
-                      <p className="text-xs text-gray-600">+47 123 45 678</p>
+                      <p className="text-xs text-gray-600">+47 48290578</p>
                     </div>
                   </motion.a>
                 </div>
