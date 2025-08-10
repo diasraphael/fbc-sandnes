@@ -186,7 +186,7 @@ export default function UpcomingEvents() {
 
   return (
     <motion.section
-      className="bg-white py-20 md:py-28 relative overflow-hidden"
+      className="bg-white py-16 md:py-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -202,14 +202,14 @@ export default function UpcomingEvents() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-10 md:mb-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <motion.span
-              className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-8 shadow-lg shadow-[#832732]/20 border border-white/20"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-[#832732] to-[#a63042] text-white text-sm uppercase tracking-[0.2em] font-medium rounded-full mb-6 shadow-lg shadow-[#832732]/20 border border-white/20"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{
@@ -226,7 +226,7 @@ export default function UpcomingEvents() {
             </motion.span>
 
             <motion.h3
-              className="text-2xl md:text-3xl text-[#832732] mb-8 font-light tracking-wide"
+              className="text-xl md:text-2xl text-[#832732] mb-6 font-light tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -236,7 +236,7 @@ export default function UpcomingEvents() {
             </motion.h3>
 
             <motion.p
-              className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -249,7 +249,7 @@ export default function UpcomingEvents() {
 
           {/* Events List */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6"
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -273,31 +273,31 @@ export default function UpcomingEvents() {
                   hidden: { opacity: 0, y: 50 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -3 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {/* Event Card */}
-                <div className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 md:p-8 border border-gray-100/50 group-hover:border-[#832732]/20 group-hover:shadow-[#832732]/10">
+                <div className="bg-gradient-to-r from-gray-50/80 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-4 md:p-6 border border-gray-100/50 group-hover:border-[#832732]/20 group-hover:shadow-[#832732]/10">
                   {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#832732]/5 to-[#a63042]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#832732]/5 to-[#a63042]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+                  <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
                     {/* Date Display */}
                     <motion.div
                       className="flex-shrink-0"
-                      whileHover={{ scale: 1.05, rotate: 1 }}
+                      whileHover={{ scale: 1.03, rotate: 1 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <div className="bg-gradient-to-br from-[#832732] to-[#a63042] text-white p-8 rounded-3xl shadow-xl relative overflow-hidden group-hover:shadow-2xl transition-shadow duration-500">
+                      <div className="bg-gradient-to-br from-[#832732] to-[#a63042] text-white p-4 md:p-5 rounded-2xl shadow-lg relative overflow-hidden group-hover:shadow-xl transition-shadow duration-500">
                         {/* Background pattern */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent"></div>
-                        <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-xl"></div>
+                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-lg"></div>
 
-                        <div className="relative z-10 text-center min-w-[100px]">
-                          <div className="text-4xl md:text-5xl font-bold leading-none mb-2">
+                        <div className="relative z-10 text-center min-w-[80px]">
+                          <div className="text-2xl md:text-3xl font-bold leading-none mb-1">
                             {event.day}
                           </div>
-                          <div className="text-sm font-medium opacity-90 uppercase tracking-[0.1em] mb-1">
+                          <div className="text-xs font-medium opacity-90 uppercase tracking-[0.1em] mb-1">
                             {event.month}
                           </div>
                           <div className="text-xs opacity-80 font-medium">
@@ -310,7 +310,7 @@ export default function UpcomingEvents() {
                     {/* Event Details */}
                     <div className="flex-1 min-w-0">
                       <motion.h4
-                        className="text-2xl md:text-3xl font-light text-[#832732] mb-4 group-hover:text-[#a63042] transition-colors duration-300 tracking-wide"
+                        className="text-lg md:text-xl font-light text-[#832732] mb-3 group-hover:text-[#a63042] transition-colors duration-300 tracking-wide"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
@@ -320,35 +320,35 @@ export default function UpcomingEvents() {
                       </motion.h4>
 
                       <motion.div
-                        className="flex flex-wrap items-center gap-6 mb-4"
+                        className="flex flex-wrap items-center gap-4 mb-3"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
                         viewport={{ once: true }}
                       >
-                        <div className="flex items-center gap-3 text-gray-700">
-                          <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
-                          <span className="text-base font-medium">
+                        <div className="flex items-center gap-2 text-gray-700">
+                          <div className="w-1.5 h-1.5 bg-[#832732] rounded-full"></div>
+                          <span className="text-sm font-medium">
                             {event.formattedDate}
                           </span>
                         </div>
-                        <div className="flex items-center gap-3 text-gray-700">
-                          <div className="w-2 h-2 bg-[#a63042] rounded-full"></div>
-                          <span className="text-base">{event.time}</span>
+                        <div className="flex items-center gap-2 text-gray-700">
+                          <div className="w-1.5 h-1.5 bg-[#a63042] rounded-full"></div>
+                          <span className="text-sm">{event.time}</span>
                         </div>
                       </motion.div>
 
                       <motion.div
-                        className="flex items-center gap-3 text-gray-600 mb-4"
+                        className="flex items-center gap-2 text-gray-600 mb-3"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
                         viewport={{ once: true }}
                       >
-                        <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                        <span className="text-base">{event.location}</span>
+                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                        <span className="text-sm">{event.location}</span>
                         <span
-                          className={`px-3 py-1 rounded-full text-xs font-medium border ${getLocationTypeColor(
+                          className={`px-2 py-1 rounded-full text-xs font-medium border ${getLocationTypeColor(
                             event.locationType
                           )}`}
                         >
@@ -358,7 +358,7 @@ export default function UpcomingEvents() {
 
                       {event.description && (
                         <motion.p
-                          className="text-gray-600 text-base leading-relaxed"
+                          className="text-gray-600 text-sm leading-relaxed"
                           initial={{ opacity: 0, x: 30 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
@@ -381,9 +381,9 @@ export default function UpcomingEvents() {
                       viewport={{ once: true }}
                     >
                       <motion.button
-                        className="bg-gradient-to-r from-[#832732] to-[#a63042] hover:from-[#a63042] hover:to-[#832732] text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#832732]/25 min-w-[140px] relative overflow-hidden border border-white/20"
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
+                        className="bg-gradient-to-r from-[#832732] to-[#a63042] hover:from-[#a63042] hover:to-[#832732] text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#832732]/25 min-w-[120px] relative overflow-hidden border border-white/20"
+                        whileHover={{ scale: 1.03, y: -1 }}
+                        whileTap={{ scale: 0.97 }}
                         transition={{ type: "spring", stiffness: 400 }}
                       >
                         <span className="relative z-10">Join Us</span>
