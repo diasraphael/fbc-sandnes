@@ -15,15 +15,25 @@ export default function HomePage() {
     <PageTransition>
       <div className="relative">
         <Navigation />
-        <LandingSection />
+        <div id="home">
+          <LandingSection />
+        </div>
         <ServiceTimes />
         <DailyVerse />
-        <UpcomingEvents />
+        <div id="events">
+          <UpcomingEvents />
+        </div>
         <YearlyPromise />
-        <LatestSermon />
-        <PastorSection />
+        <div id="sermons">
+          <LatestSermon />
+        </div>
+        <div id="about">
+          <PastorSection />
+        </div>
         <LocationMap />
-        <Footer />
+        <div id="contact">
+          <Footer />
+        </div>
       </div>
     </PageTransition>
   );

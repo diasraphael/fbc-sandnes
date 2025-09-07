@@ -12,14 +12,29 @@ export default function Navigation() {
 
   // Single source of truth for menu items
   const menuItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Sermons", href: "#" },
-    { name: "Events", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Sermons", href: "#sermons" },
+    { name: "Events", href: "#events" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const handleMenuClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleSmoothScroll = (href: string) => {
+    const targetId = href.substring(1); // Remove the '#' from href
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    
+    // Close mobile menu if open
     setIsMenuOpen(false);
   };
 
@@ -47,14 +62,14 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="relative text-white hover:text-[#832732] transition-colors duration-500 ease-out group"
+                onClick={() => handleSmoothScroll(item.href)}
+                className="relative text-white hover:text-[#832732] transition-colors duration-500 ease-out group cursor-pointer"
               >
-                <span className="relative z-10">{item.name}</span>
+                <span className="relative z-10 text-xl">{item.name}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#832732] transition-all duration-500 ease-out group-hover:w-full"></span>
-              </a>
+              </button>
             ))}
           </div>
 
@@ -113,10 +128,10 @@ export default function Navigation() {
 
               {/* Menu Items */}
               {menuItems.map((item, index) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className={`block text-[#832732] hover:text-black transition-all duration-300 ease-out text-xl font-medium py-2 transform ${
+                  onClick={() => handleSmoothScroll(item.href)}
+                  className={`block text-[#832732] hover:text-black transition-all duration-300 ease-out text-xl font-medium py-2 transform cursor-pointer ${
                     isMenuOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-4 opacity-0"
@@ -124,10 +139,9 @@ export default function Navigation() {
                   style={{
                     transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
                   }}
-                  onClick={handleMenuClick}
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
 
               {/* Footer instruction */}

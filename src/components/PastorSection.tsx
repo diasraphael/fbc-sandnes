@@ -122,7 +122,7 @@ export default function PastorSection() {
                     Pastor Paul Kalai
                   </h4>
                   <p className="text-gray-600 text-center text-sm mt-1">
-                    Lead Pastor since 2025
+                    Lead Pastor since 2019
                   </p>
                 </div>
               </motion.div>
