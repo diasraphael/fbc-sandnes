@@ -36,3 +36,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - `src/app` - Application pages and components
 - `src/components` - Reusable UI components
 - `public` - Static assets
+
+## Deployment
+
+Deploying the build out folder to azure
+
+```
+az storage blob upload-batch --account-name fbcsandnes --destination '$web' --source ./out
+```
