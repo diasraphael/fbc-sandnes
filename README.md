@@ -42,5 +42,5 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 Deploying the build out folder to azure
 
 ```
-az storage blob upload-batch --account-name fbcsandnes --destination '$web' --source ./out
+az storage blob upload-batch --account-name fbcsandnes --destination '$web' --source ./out --overwrite
 ```
