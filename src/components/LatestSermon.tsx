@@ -84,7 +84,7 @@ export default function LatestSermon() {
               <div className="relative aspect-video">
                 <iframe
                   className="w-full h-full rounded-t-3xl"
-                  src="https://www.youtube.com/embed/z0PVZBIttCg"
+                  src="https://www.youtube.com/embed/8p40d71jVk0"
                   title="Latest Sermon - FBC Sandnes"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -124,7 +124,7 @@ export default function LatestSermon() {
                     >
                       <div className="w-2 h-2 bg-[#832732] rounded-full"></div>
                       <p className="text-[#832732] font-medium text-sm">
-                        Pastor Paul Kalai • August 03, 2025
+                        Pastor Paul Kalai • September 07, 2025
                       </p>
                     </motion.div>
 
